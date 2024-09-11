@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CardPile" load_steps=4 format=3 uid="uid://duj5n44oeekfl"]
+
+[ext_resource type="Resource" uid="uid://bdstxq4nv6byd" path="res://characters/mage/cards/mage_staff_attack.tres" id="1_b8pof"]
+[ext_resource type="Script" path="res://custom_resources/card_pile.gd" id="1_uqrsc"]
+[ext_resource type="Resource" uid="uid://c6jkrq7bt4s5e" path="res://characters/mage/cards/mage_block.tres" id="2_lmbpf"]
+
+[resource]
+script = ExtResource("1_uqrsc")
+cards = Array[Resource("res://custom_resources/card.gd")]([ExtResource("1_b8pof"), ExtResource("1_b8pof"), ExtResource("1_b8pof"), ExtResource("1_b8pof"), ExtResource("1_b8pof"), ExtResource("2_lmbpf"), ExtResource("2_lmbpf"), ExtResource("2_lmbpf"), ExtResource("2_lmbpf"), ExtResource("2_lmbpf")])

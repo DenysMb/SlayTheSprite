@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CharacterStats" load_steps=4 format=3 uid="uid://ct0c3ge4tt57h"]
+
+[ext_resource type="Texture2D" uid="uid://dpfqok8tuy4r7" path="res://art/tile_0084.png" id="1_b1xdd"]
+[ext_resource type="Script" path="res://custom_resources/character_stats.gd" id="1_flwtt"]
+[ext_resource type="Resource" uid="uid://duj5n44oeekfl" path="res://characters/mage/mage_starting_deck.tres" id="3_kp2m2"]
+
+[resource]
+script = ExtResource("1_flwtt")
+starting_deck = ExtResource("3_kp2m2")
+cards_per_turn = 2
+max_mana = 4
+max_health = 20
+art = ExtResource("1_b1xdd")

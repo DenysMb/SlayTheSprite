@@ -1,0 +1,55 @@
+[gd_scene load_steps=14 format=3 uid="uid://bn55uavktenrg"]
+
+[ext_resource type="Script" path="res://enemies/crab/enemy_action_picker.gd" id="1_l44d6"]
+[ext_resource type="Script" path="res://enemies/crab/crab_attack_action.gd" id="2_rc4om"]
+[ext_resource type="Texture2D" uid="uid://bfvi02kojsa00" path="res://art/tile_0103.png" id="3_5aejm"]
+[ext_resource type="Script" path="res://enemies/crab/crab_block_action.gd" id="3_6yyh1"]
+[ext_resource type="Script" path="res://enemies/crab/crab_mega_block_action.gd" id="4_sck7s"]
+[ext_resource type="Script" path="res://custom_resources/intent.gd" id="4_sy4lo"]
+[ext_resource type="AudioStream" uid="uid://de2ryat1pxq6" path="res://art/enemy_attack.ogg" id="5_3asqn"]
+[ext_resource type="Texture2D" uid="uid://bi6pfjs32f820" path="res://art/tile_0101.png" id="6_skt1v"]
+[ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://art/tile_0102.png" id="8_0hirt"]
+[ext_resource type="AudioStream" uid="uid://k8m4o3hlwm7l" path="res://art/enemy_block.ogg" id="8_7lfg8"]
+
+[sub_resource type="Resource" id="Resource_o8y1r"]
+script = ExtResource("4_sy4lo")
+number = "7"
+icon = ExtResource("3_5aejm")
+
+[sub_resource type="Resource" id="Resource_km3xm"]
+script = ExtResource("4_sy4lo")
+number = ""
+icon = ExtResource("6_skt1v")
+
+[sub_resource type="Resource" id="Resource_aovn5"]
+script = ExtResource("4_sy4lo")
+number = ""
+icon = ExtResource("8_0hirt")
+
+[node name="CrabEnemyAI" type="Node"]
+script = ExtResource("1_l44d6")
+
+[node name="AttackAction" type="Node" parent="."]
+script = ExtResource("2_rc4om")
+damage = null
+intent = SubResource("Resource_o8y1r")
+type = 1
+chance_weight = 1.0
+sound = ExtResource("5_3asqn")
+
+[node name="BlockAction" type="Node" parent="."]
+script = ExtResource("3_6yyh1")
+block = null
+intent = SubResource("Resource_km3xm")
+type = 1
+chance_weight = 1.0
+sound = ExtResource("8_7lfg8")
+
+[node name="MegaBlockAction" type="Node" parent="."]
+script = ExtResource("4_sck7s")
+block = null
+hp_threshold = null
+intent = SubResource("Resource_aovn5")
+type = null
+chance_weight = null
+sound = ExtResource("8_7lfg8")
